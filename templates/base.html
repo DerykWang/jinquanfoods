@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+                <title>{% block title %}模版标题{% endblock %}</title>
+                <script async="" src="{% static 'js/core.php' %}"></script>
+                <!--
+                <meta name="keywords" content="{{ site_kw }}">
+                <meta name="description" content="{{ site_desc }}">
+                -->
+                <meta name="keywords" content="锦全,锦全食品,冷冻食品,菏泽冷冻,菏泽冷冻食品,锦全食品商城">
+                <meta name="description" content="菏泽开发区锦全食品有限公司-安全放心的食品供应商,现面向菏泽八县二区提供冷冻食品的免费配送服务">
+                <link rel="stylesheet" href="{% static 'css/grid.css' %}">
+                <link rel="stylesheet" href="{% static 'css/style.css' %}">
+                <link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+                <script src="{% static 'js/html5.js' %}"></script>
+                <script src="{% static 'js/jquery-1.7.1.min.js' %}"></script>
+                <script src="{% static 'js/bjqs-1.3.min.js' %}"></script>  	
+        	</head>
+	<body>
+		{% block top %} 这里放top.html {% endblock %}
+		{% block header %} 这里放header.html {% endblock %}
+		{% block slide %}  这里放slid.html {% endblock %}
+		{% block main %} 这里放main.html {% endblock %}
+		{% block footer %} 这里放footer.html {% endblock %}
+        <div style=" position:fixed; top:20%; left:95%; width:100px; height:50px; margin:-25px 0 0 -50px; ">
+<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=326681766&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:326681766:53" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+        </div>
+	</body>
+</html>

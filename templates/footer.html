@@ -1,0 +1,93 @@
+{% load staticfiles %}
+<footer>
+	<div class="footer_navigation">
+		<div class="container_12">
+			<div class="grid_3">
+				 <h3>锦全食品联系方式</h3>
+				 <!--
+				<ul class="f_contact">
+				-->
+				<ul>
+					<li>菏泽市开发区长江东路5299号</li>
+					<li>0530-5531868</li>
+					<li>Email: <a href="mailto:1306075970@qq.com">1306075970@qq.com</a></li>
+				</ul><!-- .f_contact -->
+			</div><!-- .grid_3 -->
+
+			<div class="grid_3">
+				<h3>产品类别</h3>
+				<nav class="f_menu">
+					<ul>
+						{% for cate in catelist %}
+						<li><a href="{% url 'category' cate.id %}">{{ cate.name }}</a></li>
+						{% empty %}
+							<li> no category!</li>
+						{% endfor %}
+						<!--
+						<li><a href="http://www.lbwgs.com/html/product/kuqiaokafei/">咖啡系列</a></li>
+						<li><a href="http://www.lbwgs.com/html/product/">更多产品&gt;&gt;</a></li>
+						-->
+					</ul>
+					<!--
+				</nav>--><!-- .private -->
+				<!--
+			</div>--><!-- .grid_3 -->
+
+			<div class="grid_3">
+			<!--
+				<h3>菏泽开发区锦全官方网店</h3>
+				<nav class="f_menu">
+					<ul>
+						<li><a href="http://lebaiwei.tmall.com/" target="_blank">点击进入&gt;&gt; 菏泽开发区锦全旗舰店</a></li>
+						<li>
+							<a href="http://lebaiwei.tmall.com/" target="_blank" title="菏泽开发区锦全苦荞茶官方天猫旗舰店"><img src="./菏泽开发区锦全食品有限责任公司官方网站_files/lbwtms.png" alt="菏泽开发区锦全天猫旗舰店"></a>
+						</li>
+					</ul>
+			-->
+				</nav><!-- .private -->
+			</div><!-- .grid_3 -->
+
+			<div class="grid_3">
+				<h3>关于锦全食品</h3>
+				<nav class="f_menu">
+					<ul>
+						<li><a href="{% url 'aboutus' %}">锦全公司简介</a></li>
+						<li><a href="{% url 'contectus' %}">锦全联系方式</a></li>
+						<li><a href="{% url 'product' %}">锦全产品列表</a></li>
+					</ul>
+				</nav><!-- .private -->
+			</div><!-- .grid_3 -->
+
+			<div class="clear"></div>
+		</div><!-- .container_12 -->
+	</div><!-- .footer_navigation -->
+
+	<div class="footer_info">
+		<div class="container_12">
+			<div class="grid_6">
+				<p class="copyright" align="center">CopyRight © 1997-2014<!-- <a href="{% url 'index' %}">锦全食品</a> -->&nbsp;&nbsp;&nbsp;<a href="{% url 'index' %}">菏泽开发区锦全食品有限责任公司</a></p>
+				<p><span style="display:none;"><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Faab88824d083635dbe5e1cd0e6bd92a8' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="{% static 'h.js' %}" type="text/javascript"></script><a href="http://tongji.baidu.com/hm-web/welcome/ico?s=aab88824d083635dbe5e1cd0e6bd92a8" target="_blank">网站统计</a></span></p>
+			</div><!-- .grid_6 -->
+
+			<div class="grid_6" align="center">
+				<div>
+			<!--
+				<div class="soc">  -->
+				<!--                      
+					<a class="qq" href="qq">QQ:8888888</a>
+					<a class="tweibo" href="qq">Weibo:us</a>-->
+					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=326681766&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:326681766:51" alt="业务咨询QQ" title="业务咨询QQ"/></a>
+					<!--
+					<a class="qzone" href="#"></a>
+					<a class="baidu" href="#"></a>
+					-->
+				</div>
+			</div>
+
+			<div class="clear"></div>
+		</div><!-- .container_12 -->
+	</div><!-- .footer_info -->
+</footer>

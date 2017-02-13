@@ -1,0 +1,144 @@
+<section id="main" class="home">
+	<div class="container_12">
+		<div id="content">
+			<div class="grid_12">
+				<span class="c-red"><a href="{% url 'product' %}" target="_blank">更多产品&gt;&gt;</a></span>
+				<h2 class="product-title">热门产品</h2>
+			</div>
+
+			<div class="clear"></div>
+
+			<div class="products">
+
+					{% for pro in prolist %}
+										<article class="grid_3 article">
+						<a href="{% url 'detail' pro.id %}">
+							<div class="prev">
+								<img src="{{ pro.img.url }}" />
+							</div>
+							<h3>{{ pro.name }}</h3>
+						</a>
+										</article>
+
+					{% empty %}
+						<p>no data</p>
+					{% endfor %}
+
+			<!--
+														<article class="grid_3 article">                        
+					<a href="http://www.lbwgs.com/html/2014/kuqiaocha_0712/1.html" target="_blank">
+						<div class="prev">
+							<img src="./乐百味食品有限责任公司官方网站_files/20151011095003591.jpg" alt="乐百味苦荞茶100g袋装" title="">
+						</div>
+						<h3>乐百味苦荞茶100g袋装</h3>
+					</a>
+				</article>
+									<article class="grid_3 article">                        
+					<a href="http://www.lbwgs.com/html/2014/kuqiaocha_0716/2.html" target="_blank">
+						<div class="prev">
+							<img src="./乐百味食品有限责任公司官方网站_files/20151011044835309.jpg" alt="乐百味苦荞茶100g盒装" title="">
+						</div>
+						<h3>乐百味苦荞茶100g盒装</h3>
+					</a>
+				</article>
+									<article class="grid_3 article">                        
+					<a href="http://www.lbwgs.com/html/2014/kuqiaocha_0716/3.html" target="_blank">
+						<div class="prev">
+							<img src="./乐百味食品有限责任公司官方网站_files/03.jpg" alt="乐百味苦荞茶125g条形装" title="">
+						</div>
+						<h3>乐百味苦荞茶125g条形装</h3>
+					</a>
+				</article>
+									<article class="grid_3 article">                        
+					<a href="http://www.lbwgs.com/html/2014/kuqiaocha_0716/4.html" target="_blank">
+						<div class="prev">
+							<img src="./乐百味食品有限责任公司官方网站_files/20151011101127564.jpg" alt="乐百味苦荞茶400g手提礼盒" title="">
+						</div>
+						<h3>乐百味苦荞茶400g手提礼盒</h3>
+					</a>
+				</article>
+									<article class="grid_3 article">                        
+					<a href="http://www.lbwgs.com/html/2014/kuqiaocha_0720/5.html" target="_blank">
+						<div class="prev">
+							<img src="./乐百味食品有限责任公司官方网站_files/05.jpg" alt="乐百味苦荞茶400g全铁礼盒" title="">
+						</div>
+						<h3>乐百味苦荞茶400g全铁礼盒</h3>
+					</a>
+				</article>
+									<article class="grid_3 article">                        
+					<a href="http://www.lbwgs.com/html/2014/kuqiaocha_0720/6.html" target="_blank">
+						<div class="prev">
+							<img src="./乐百味食品有限责任公司官方网站_files/06.jpg" alt="乐百味苦荞茶400g铁礼盒" title="">
+						</div>
+						<h3>乐百味苦荞茶400g铁礼盒</h3>
+					</a>
+				</article>
+									<article class="grid_3 article">                        
+					<a href="http://www.lbwgs.com/html/2014/kuqiaocha_0720/7.html" target="_blank">
+						<div class="prev">
+							<img src="./乐百味食品有限责任公司官方网站_files/07.jpg" alt="乐百味苦荞养生茶100g盒装" title="">
+						</div>
+						<h3>乐百味苦荞养生茶100g盒装</h3>
+					</a>
+				</article>
+									<article class="grid_3 article">                        
+					<a href="http://www.lbwgs.com/html/2014/kuqiaocha_0720/8.html" target="_blank">
+						<div class="prev">
+							<img src="./乐百味食品有限责任公司官方网站_files/08.jpg" alt="乐百味苦荞养颜茶100g盒装" title="">
+						</div>
+						<h3>乐百味苦荞养颜茶100g盒装</h3>
+					</a>
+				</article>
+				-->
+									
+				<div class="clear"></div>
+			</div><!-- .products -->
+			<div class="clear"></div>
+		</div><!-- #content -->
+
+		<div class="clear"></div>
+
+		
+
+		<div id="content_bottom">
+			<div class="grid_6">
+				<div class="bottom_block about_as">
+					<h3><span><a href="{% url 'aboutus' %}" target="_blank">查看全部</a></span><a href="{% url 'aboutus' %}" target="_blank">关于我们</a></h3>
+					<p>　　菏泽开发区锦全食品有限公司,位于鲁西南牡丹之乡菏泽，地理位置优越，交通便利；是一家专注于冷冻食品类系列产品销售，配送于一体的贸易型企业。公司与多家品牌冷冻食品厂家和知名餐饮连锁店建立了长期稳定的合作关系。锦全食品经销配送的三全和思念冷冻面点，金锣冷冻肉食和中粮冷冻水产等品种齐全，价格合理。保证产品质量，以多品种经营特色和提供绿色健康食品的原则，赢得了广大客户的信任。我们真诚希望与您精诚合作，携手共赢。</p>
+                    <p>　　锦全食品有限公司，主要产品有面点系列(速冻水饺等),肉食调味系列(骨肉相连,鸡柳等),海鲜系列(冷冻带鱼,虾米等)以及其他冷冻食品.</p>
+				</div><!-- .about_as -->
+			</div><!-- .grid_6 -->
+
+			<div class="grid_6">
+				<div class="bottom_block news">
+					<h3><span><a href="{% url 'news' %}" target="_blank">公司动态</a></span><a href="{% url 'news' %}" target="_blank">公司动态</a></h3>
+											<ul>
+
+							{% for news in newslist %}
+													<li>
+							<time>{{ news.created_at }}</time>
+							<a href="{% url 'news' %}" class="f14" title="news">{{ news.title }}</a>
+							<p class="c999">
+								 {{ news.title }}<a href="{% url 'news' %}">查看详情&gt;&gt;</a>
+							</p>
+							{% empty %}
+								<p>最近没有动态</p>
+							{% endfor %}
+							<!--
+						</li>
+													<li>
+							<time>2016-06-25 14:19:42</time>
+							<a href="{% url 'product' %}" class="f14" title="我公司荣登甘肃省诚信企业红榜名单">我公司荣登甘肃省诚信企业红榜名单</a>
+							<p class="c999">
+								   ...<a href="http://www.lbwgs.com/html/2016/news_0625/75.html">查看详情&gt;&gt;</a>
+							</p>
+						</li>-->
+												</ul>
+										</div>
+
+										<!-- .news -->
+			</div><!-- .grid_6 -->
+			<div class="clear"></div>
+		</div><!-- #content_bottom -->
+	</div><!-- .container_12 -->
+</section><!-- #main.home -->

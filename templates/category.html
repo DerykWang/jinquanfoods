@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<!--
+<title>this is product html!</title>-->
+{% block title %}菏泽开发区锦全食品有限公司产品系列{% endblock %}
+
+{% block top %}
+    {% include 'top.html' %}
+{% endblock %}
+
+
+
+{% block header %}
+    {% include 'header.html' %}
+{% endblock %}
+
+
+{% block slide %}
+{% endblock %}
+
+
+
+
+{% block main %}
+    <div class="breadcrumbs">
+        <div class="container_12">
+            <div class="grid_12">
+                <span class="current">当前位置：</span><span></span><a href="{% url 'index' %}">首页</a><span></span> <a href="{% url 'product' %}">>产品展示</a> > <a href="{% url 'category' cate.id %}"> &nbsp>{{ cate.name }}</a>   正文
+            </div>
+        </div>
+    </div>
+
+
+
+        <section id="main">
+        <div class="container_12">
+            <div id="content" class="grid_9">
+                <article>
+                    <div class="content_article">
+                        <!--<dl class="pro_info">  -->
+                        <dl>
+                            <!--
+                            <dt>
+                                <img src="{{ pro.img.url }}" title="{{ pro.name }}"/>
+                            </dt>
+
+                            -->
+                            <dd>
+                                <h1 class="page_title">产品系列: {{ cate.name }}</h1>
+                                <p></p>
+                                <p></p>
+                                <div class="pro_spec">系列描述：{{ cate.description }}</div>
+                                <div class="pro_spec">包含的产品：{% for pro in cate.product_set.all %}<a href="{% url 'detail' pro.id %}"><li>{{ pro.name }}</li></a>{% endfor %}</div>
+                                <!--
+                                <div class="price">
+                                    价格：
+                                    <div class="price_old">￥{{ pro.price }}</div>
+                                </div>
+                                <div class="cart">
+                                -->
+                                <!--没有此段注释掉
+                                    <a href="http://detail.tmall.com/item.htm?id=39796676197" target="_blank" class="bay">网店优惠购买&raquo;</a>
+                                    -->
+                                </div>
+                            </dd>
+                        </dl>
+                            <p>　</p>
+                        <div class="article_next">
+                            
+                            返回产品列表： <a href="{% url 'product' %}">产品列表</a><br>
+
+                        </div>
+                    </div>
+            
+                </article>
+                <div class="clear"></div>
+            </div>
+
+
+{% endblock %}
+
+{% block footer%}
+    {% include 'footer.html' %}
+{% endblock %}

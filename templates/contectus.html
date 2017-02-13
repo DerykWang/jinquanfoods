@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<!--
+<title>this is product html!</title>-->
+{% block title %}菏泽开发区锦全食品有限公司联系方式{% endblock %}
+
+{% block top %}
+    {% include 'top.html' %}
+{% endblock %}
+
+
+
+{% block header %}
+    {% include 'header.html' %}
+{% endblock %}
+
+
+
+{% block slide %}
+{% endblock %}
+
+
+
+{% block main %}
+        <div class="breadcrumbs">
+        <div class="container_12">
+            <div class="grid_12">
+                <span class="current">当前位置：</span><span></span><a href="{% url 'index' %}">首页</a><span></span>
+                菏泽锦全食品联系方式            </div><!-- .grid_12 -->
+        </div><!-- .container_12 -->
+    </div><!-- .breadcrumbs -->
+    
+    <section id="main">
+        <div class="container_12">
+            <div id="content" class="grid_9">
+                <header>
+                    <h1 class="page_title">锦全食品联系方式</h1>
+                </header>
+                    
+                <article>
+                    <div class="grid_9">
+                        <div class="page-content">
+                            <h3>锦全食品总公司：</h3>
+电话：0530-5531868<br />
+地址：菏泽市开发区长江东路5299号（绿源肉联厂院内）金正大国际北门对面<br />
+邮编：274000<br />
+电子邮件：<span class="mail"><a href="mailto:1306075970@qq.com">1306075970@qq.com</a></span><br />
+<h3>锦全食品销售热线：</h3>
+0530-5531868<br />
+<h3>锦全食品售后服务、促销活动投诉邮箱：</h3>
+<span class="mail"><a href="mailto:1306075970@qq.com">1306075970@qq.com</a></span><br />
+<h3>锦全食品投诉咨询电话：</h3>
+0530-5531868                        </div>
+                    </div><!-- .adress -->
+                </article>
+                
+                <div class="clear"></div>
+            </div><!-- #content -->
+
+{% endblock %}
+
+
+
+{% block footer %}
+    {% include 'footer.html' %}
+{% endblock %}

@@ -1,0 +1,36 @@
+{% load staticfiles%}
+<div class="slide">
+	<div id="banner-fade" style="height: 360px; max-width: 984px; position: relative;"><div class="bjqs-wrapper" style="width: 984px; height: 120px; overflow: hidden; position: relative;"><ul class="bjqs" style="height: 360px; width: 7872px; left: -2952px; display: block;"><li class="bjqs-slide" style="height: 360px; width: 984px; display: list-item; float: left; position: relative;" data-clone="first" data-slide="0">
+				<img src="{% static 'img/slid-4.jpg' %}" title="菏泽开发区锦全食品有限公司产品展示" style="height: 360px; width: 984px;">
+			<p class="bjqs-caption">菏泽开发区锦全食品有限公司产品展示</p></li>
+			<li class="bjqs-slide" style="height: 360px; width: 984px; float: left; position: relative; display: list-item;">
+				<img src="{% static 'img/slid-1.jpg' %}" title="菏泽开发区锦全食品有限公司" style="height: 360px; width: 984px;">
+			<p class="bjqs-caption">菏泽开发区锦全食品有限公司</p></li>
+			<li class="bjqs-slide" style="height: 360px; width: 984px; float: left; position: relative; display: list-item;">
+				<img src="{% static 'img/slid-2.jpg' %}" title="菏泽开发区锦全食品有限公司产品展示" style="height: 360px; width: 984px;">
+			<p class="bjqs-caption">菏泽开发区锦全食品有限公司产品展示</p></li>
+			<li class="bjqs-slide" style="height: 360px; width: 984px; float: left; position: relative; display: list-item;">
+				<img src="{% static 'img/slid-3.jpg' %}" title="菏泽开发区锦全食品有限公司" style="height: 360px; width: 984px;">
+			<p class="bjqs-caption">菏泽开发区锦全食品有限公司</p></li>
+			<li class="bjqs-slide" style="height: 360px; width: 984px; float: left; position: relative; display: list-item;">
+				<img src="{% static 'img/slid-4.jpg' %}" title="菏泽开发区锦全食品有限公司产品展示" style="height: 360px; width: 984px;">
+			<p class="bjqs-caption">菏泽开发区锦全食品有限公司产品展示</p></li>
+		<li class="bjqs-slide" style="height: 360px; width: 984px; display: list-item; float: left; position: relative;" data-clone="last" data-slide="0">
+				<img src="{% static 'img/slid-1.jpg' %}" title="菏泽开发区锦全食品有限公司" style="height: 360px; width: 984px;">
+			<p class="bjqs-caption">菏泽开发区锦全食品有限公司</p></li></ul></div>
+		<!-- start Basic Jquery Slider -->
+		
+		<!-- end Basic jQuery Slider -->
+	<ul class="bjqs-controls v-centered"><li class="bjqs-prev"><a href="http://www.lbwgs.com/#" data-direction="previous" style="top: 40.4167%;">Prev</a></li><li class="bjqs-next"><a href="http://www.lbwgs.com/#" data-direction="forward" style="top: 40.4167%;">Next</a></li></ul><ol class="bjqs-markers h-centered" style="left: 488.5px;"><li class=""><a href="http://www.lbwgs.com/#">1</a></li><li class=""><a href="http://www.lbwgs.com/#">2</a></li><li class="active-marker"><a href="http://www.lbwgs.com/#">3</a></li><li class=""><a href="http://www.lbwgs.com/#">4</a></li></ol></div>
+	<!-- End outer wrapper -->
+	<script class="secret-source">
+		jQuery(document).ready(function($) {
+		  $('#banner-fade').bjqs({
+			animtype      : 'slide',
+			height      : 360,
+			width       : 984,
+			responsive  : true
+		  });
+		});
+	</script>
+</div>

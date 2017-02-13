@@ -1,0 +1,328 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<!--
+<title>this is product html!</title>-->
+{% block title %}菏泽开发区锦全食品公司产品列表,主要有:{{% endblock %}
+
+{% block top %}
+    {% include 'top.html' %}
+{% endblock %}
+
+
+
+{% block header %}
+    {% include 'header.html' %}
+{% endblock %}
+
+
+
+
+{% block slide %}
+<div class="breadcrumbs">
+        <div class="container_12">
+            <div class="grid_12">
+                <span class="current">当前位置：</span><span></span><a href="{% url 'index' %}">首页> </a><span></span><a href="{% url 'product' %}">  产品展示</a> &nbsp&nbsp&nbsp>  列表
+            </div><!-- .grid_12 -->
+        </div><!-- .container_12 -->
+    </div><!-- .breadcrumbs -->
+    
+    <section id="main">
+        <div class="container_12">
+            <div id="content" class="grid_9">
+{% endblock %}
+
+
+
+
+{% block main %}
+<header>
+                    <h1 class="page_title">热卖产品</h1>
+                </header>
+                <div class="products_list catalog">
+{% for pro in prolist %}
+     <article class="clearfix">
+                        <div class="grid_3">
+                            <div class="prev">
+                                <a href="{% url 'detail' pro.id %}" title="{{ pro.name }}" target="_blank"><img src="{{ pro.img.url }}" alt="{{ pro.name }}"></a>
+                            </div>
+                        </div>
+                        <div class="grid_6">
+                            <div class="entry_content">
+                                <h3 class="title"><a href="{% url 'detail' pro.id %}" target="_blank">{{ pro.name }}</a></h3>
+                                <p>{{ pro.size }}&nbsp&nbsp 所属类别：{% for cate in pro.catelog.all %}<a href="{% url 'category' cate.id %}">&nbsp{{ cate.name }}&nbsp</a>{% endfor %}</p>
+                            </div>
+                            <div class="price">
+                                <div class="price_old">价格：</div>
+                                {{ pro.price }}  </div>
+                            <div class="cart">
+                                <a href="{% url 'detail' pro.id %}" class="bay" target="_blank">&raquo;查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+{% empty %}
+    <p>没有产品,请添加!</p>
+{% endfor %}
+
+<!-- 这里注释掉
+                                                        <article class="clearfix">
+                        <div class="grid_3">
+                            <div class="prev">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaocha_0712/1.html" title="乐百味苦荞茶100g袋装" target="_blank"><img src="http://www.lbwgs.com/uploadfile/2015/1011/20151011095003591.jpg" alt="乐百味苦荞茶100g袋装"></a>
+                            </div>
+                        </div>
+                        <div class="grid_6">
+                            <div class="entry_content">
+                                <h3 class="title"><a href="http://www.lbwgs.com/html/2014/kuqiaocha_0712/1.html" target="_blank">乐百味苦荞茶100g袋装</a></h3>
+                                <p>产品规格：1包*20袋*5g</p>
+                            </div>
+                            <div class="price">
+                                <div class="price_old">建议零售价：</div>
+                                ￥                            </div>
+                            <div class="cart">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaocha_0712/1.html" class="bay" target="_blank">&raquo;查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+                                        <article class="clearfix">
+                        <div class="grid_3">
+                            <div class="prev">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaocha_0716/2.html" title="乐百味苦荞茶100g盒装" target="_blank"><img src="http://www.lbwgs.com/uploadfile/2015/1011/20151011044835309.jpg" alt="乐百味苦荞茶100g盒装"></a>
+                            </div>
+                        </div>
+                        <div class="grid_6">
+                            <div class="entry_content">
+                                <h3 class="title"><a href="http://www.lbwgs.com/html/2014/kuqiaocha_0716/2.html" target="_blank">乐百味苦荞茶100g盒装</a></h3>
+                                <p>产品规格：1盒*20袋*5g</p>
+                            </div>
+                            <div class="price">
+                                <div class="price_old">建议零售价：</div>
+                                ￥                            </div>
+                            <div class="cart">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaocha_0716/2.html" class="bay" target="_blank">&raquo;查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+                                        <article class="clearfix">
+                        <div class="grid_3">
+                            <div class="prev">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaocha_0716/3.html" title="乐百味苦荞茶125g条形装" target="_blank"><img src="/img/content/03.jpg" alt="乐百味苦荞茶125g条形装"></a>
+                            </div>
+                        </div>
+                        <div class="grid_6">
+                            <div class="entry_content">
+                                <h3 class="title"><a href="http://www.lbwgs.com/html/2014/kuqiaocha_0716/3.html" target="_blank">乐百味苦荞茶125g条形装</a></h3>
+                                <p>产品规格：1条*5小盒*5袋*5g</p>
+                            </div>
+                            <div class="price">
+                                <div class="price_old">建议零售价：</div>
+                                ￥                            </div>
+                            <div class="cart">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaocha_0716/3.html" class="bay" target="_blank">&raquo;查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+                                        <article class="clearfix">
+                        <div class="grid_3">
+                            <div class="prev">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaocha_0716/4.html" title="乐百味苦荞茶400g手提礼盒" target="_blank"><img src="http://www.lbwgs.com/uploadfile/2015/1011/20151011101127564.jpg" alt="乐百味苦荞茶400g手提礼盒"></a>
+                            </div>
+                        </div>
+                        <div class="grid_6">
+                            <div class="entry_content">
+                                <h3 class="title"><a href="http://www.lbwgs.com/html/2014/kuqiaocha_0716/4.html" target="_blank">乐百味苦荞茶400g手提礼盒</a></h3>
+                                <p>产品规格：1提*4大袋*20小袋*5g</p>
+                            </div>
+                            <div class="price">
+                                <div class="price_old">建议零售价：</div>
+                                ￥                            </div>
+                            <div class="cart">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaocha_0716/4.html" class="bay" target="_blank">&raquo;查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+                                        <article class="clearfix">
+                        <div class="grid_3">
+                            <div class="prev">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaocha_0720/5.html" title="乐百味苦荞茶400g全铁礼盒" target="_blank"><img src="/img/content/05.jpg" alt="乐百味苦荞茶400g全铁礼盒"></a>
+                            </div>
+                        </div>
+                        <div class="grid_6">
+                            <div class="entry_content">
+                                <h3 class="title"><a href="http://www.lbwgs.com/html/2014/kuqiaocha_0720/5.html" target="_blank">乐百味苦荞茶400g全铁礼盒</a></h3>
+                                <p>产品规格：1盒*4小盒*20袋*5克</p>
+                            </div>
+                            <div class="price">
+                                <div class="price_old">建议零售价：</div>
+                                ￥220元/盒                            </div>
+                            <div class="cart">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaocha_0720/5.html" class="bay" target="_blank">&raquo;查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+                                        <article class="clearfix">
+                        <div class="grid_3">
+                            <div class="prev">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaocha_0720/6.html" title="乐百味苦荞茶400g铁礼盒" target="_blank"><img src="/img/content/06.jpg" alt="乐百味苦荞茶400g铁礼盒"></a>
+                            </div>
+                        </div>
+                        <div class="grid_6">
+                            <div class="entry_content">
+                                <h3 class="title"><a href="http://www.lbwgs.com/html/2014/kuqiaocha_0720/6.html" target="_blank">乐百味苦荞茶400g铁礼盒</a></h3>
+                                <p>产品规格：1盒*4铁盒*20袋*5克</p>
+                            </div>
+                            <div class="price">
+                                <div class="price_old">建议零售价：</div>
+                                ￥                            </div>
+                            <div class="cart">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaocha_0720/6.html" class="bay" target="_blank">&raquo;查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+                                        <article class="clearfix">
+                        <div class="grid_3">
+                            <div class="prev">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaocha_0720/7.html" title="乐百味苦荞养生茶100g盒装" target="_blank"><img src="/img/content/07.jpg" alt="乐百味苦荞养生茶100g盒装"></a>
+                            </div>
+                        </div>
+                        <div class="grid_6">
+                            <div class="entry_content">
+                                <h3 class="title"><a href="http://www.lbwgs.com/html/2014/kuqiaocha_0720/7.html" target="_blank">乐百味苦荞养生茶100g盒装</a></h3>
+                                <p>产品规格：1盒*20袋*5g</p>
+                            </div>
+                            <div class="price">
+                                <div class="price_old">建议零售价：</div>
+                                ￥                            </div>
+                            <div class="cart">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaocha_0720/7.html" class="bay" target="_blank">&raquo;查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+                                        <article class="clearfix">
+                        <div class="grid_3">
+                            <div class="prev">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaocha_0720/8.html" title="乐百味苦荞养颜茶100g盒装" target="_blank"><img src="/img/content/08.jpg" alt="乐百味苦荞养颜茶100g盒装"></a>
+                            </div>
+                        </div>
+                        <div class="grid_6">
+                            <div class="entry_content">
+                                <h3 class="title"><a href="http://www.lbwgs.com/html/2014/kuqiaocha_0720/8.html" target="_blank">乐百味苦荞养颜茶100g盒装</a></h3>
+                                <p>产品规格：1盒*20袋*5g</p>
+                            </div>
+                            <div class="price">
+                                <div class="price_old">建议零售价：</div>
+                                ￥                            </div>
+                            <div class="cart">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaocha_0720/8.html" class="bay" target="_blank">&raquo;查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+                                        <article class="clearfix">
+                        <div class="grid_3">
+                            <div class="prev">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaokafei_1024/13.html" title="苦荞咖啡300g条型" target="_blank"><img src="http://www.lbwgs.com/uploadfile/2014/1024/20141024041915338.jpg" alt="苦荞咖啡300g条型"></a>
+                            </div>
+                        </div>
+                        <div class="grid_6">
+                            <div class="entry_content">
+                                <h3 class="title"><a href="http://www.lbwgs.com/html/2014/kuqiaokafei_1024/13.html" target="_blank">苦荞咖啡300g条型</a></h3>
+                                <p>产品规格：1条*4盒*5袋*15g</p>
+                            </div>
+                            <div class="price">
+                                <div class="price_old">建议零售价：</div>
+                                ￥                            </div>
+                            <div class="cart">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaokafei_1024/13.html" class="bay" target="_blank">&raquo;查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+                                        <article class="clearfix">
+                        <div class="grid_3">
+                            <div class="prev">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaokafei_1024/14.html" title="苦荞咖啡600g新礼盒" target="_blank"><img src="http://www.lbwgs.com/uploadfile/2014/1024/20141024035131414.jpg" alt="苦荞咖啡600g新礼盒"></a>
+                            </div>
+                        </div>
+                        <div class="grid_6">
+                            <div class="entry_content">
+                                <h3 class="title"><a href="http://www.lbwgs.com/html/2014/kuqiaokafei_1024/14.html" target="_blank">苦荞咖啡600g新礼盒</a></h3>
+                                <p>产品规格：1盒*4小盒*10袋*15g</p>
+                            </div>
+                            <div class="price">
+                                <div class="price_old">建议零售价：</div>
+                                ￥                            </div>
+                            <div class="cart">
+                                <a href="http://www.lbwgs.com/html/2014/kuqiaokafei_1024/14.html" class="bay" target="_blank">&raquo;查看详情</a>
+                            </div>
+                        </div>
+                    </article>
+-->
+
+                                                    </div><!-- .products_list -->
+                <div class="clear"></div>
+          <!--
+                <div id="pages" class="text-c">
+                    <a class="a1">32</a> 
+                    <a href="/html/product/index.html" class="a1">上一页</a> 
+                    <span>1</span>
+                    <a href="/html/product/2.html">2</a> 
+                    <a href="/html/product/3.html">3</a> 
+                    <a href="/html/product/4.html">4</a> 
+                    <a href="/html/product/2.html" class="a1">下一页</a></div>
+                -->
+                 <div id="pages" class="text-c"><!--
+                    <ul id="pagination-flickr">  -->
+                        <a class="a1">共{{ amount }}个</a> 
+                        {% if prolist.has_previous %}
+                            <a href="?page={{ prolist.previous_page_number }}" class="a1">&laquo;上一页</a>
+                        {% else %}
+                            &laquo;上一页
+                        {% endif %}
+                            {{ prolist.number }}/{{ prolist.paginator.num_pages }}
+                        {% if prolist.has_next %}
+                            <a href="?page={{ prolist.next_page_number }}" class="a1">下一页 &raquo;</a>
+                        {% else %}
+                            下一页 &raquo;
+                        {% endif %}
+                <!--
+                <div id="pages" class="text-c">--><!--
+                    <ul id="pagination-flickr">  -->
+                    <!--
+                        {% if pros.has_previous %}
+                            <a href="?page={{ pros.previous_page_number }}">&laquo;上一页</a>
+                        {% else %}
+                            &laquo;上一页
+                        {% endif %}
+                            {{ pros.number }}/{{ pros.paginator.num_pages }}
+                        {% if pros.has_next %}
+                            <a href="?page={{ pros.next_page_number }}">下一页 &raquo;</a>
+                        {% else %}
+                            下一页 &raquo;
+                        {% endif %}
+                        -->
+                                       
+
+                <!--
+                <div id="pagination">
+            <ul id="pagination-flickr">
+    {% if pros.has_previous %}
+    <li class="previous"><a href="?page={{ pros.previous_page_number }}">&laquo;上一页</a></li>
+    {% else %}
+    <li class="previous-off">&laquo;上一页</li>
+    {% endif %}
+     <li class="active">{{ pros.number }}/{{ pros.paginator.num_pages }}</li>
+    {% if pros.has_next %}
+      <li class="next"><a href="?page={{ pros.next_page_number }}">下一页 &raquo;</a></li>
+    {% else %}
+      <li class="next-off">下一页 &raquo;</li>
+    {% endif %}
+   </ul>
+
+   -->
+</div>
+            </div><!-- #content -->
+
+{% endblock %}
+
+
+{% block footer %}
+    {% include 'footer.html' %}
+{% endblock %}

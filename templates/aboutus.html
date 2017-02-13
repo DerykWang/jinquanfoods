@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<!--
+<title>this is product html!</title>-->
+{% block title %}菏泽开发区锦全食品有限公司介绍{% endblock %}
+
+{% block top %}
+    {% include 'top.html' %}
+{% endblock %}
+
+
+
+{% block header %}
+    {% include 'header.html' %}
+{% endblock %}
+
+
+{% block slide %}
+{% endblock %}
+
+
+{% block main %}
+    <div class="breadcrumbs">
+        <div class="container_12">
+            <div class="grid_12">
+                <span class="current">当前位置：</span><span></span><a href="{% url 'index' %}">首页</a><span></span>锦全食品公司简介            </div><!-- .grid_12 -->
+        </div><!-- .container_12 -->
+    </div><!-- .breadcrumbs -->
+    
+    <section id="main">
+        <div class="container_12">
+            <div id="content" class="grid_9">
+                <header>
+                    <h1 class="page_title">锦全食品公司简介</h1>
+                </header>
+                    
+                <article>
+                    <div class="grid_9">
+                        <div class="page-content">
+                            <div style="font-size:16px;">
+                                <p>　　菏泽开发区锦全食品有限公司,拥有完全合格的食品行业安全从业资质,位于鲁西南牡丹之乡菏泽，地理位置优越，交通便利；是一家专注于冷冻食品类系列产品销售，配送于一体的贸易型企业.公司与多家品牌冷冻食品厂家和知名餐饮连锁店建立了长期稳定的合作关系。</p>
+                                <p>　　锦全食品经销配送的三全和思念冷冻面点，金锣冷冻肉食和中粮冷冻水产等品种齐全，价格合理。保证产品质量，以多品种经营特色和提供绿色健康食品的原则，赢得了广大客户的信任。我们真诚希望与您精诚合作，携手共赢。主要产品有面点系列(速冻水饺等),肉食调味系列(骨肉相连,鸡柳等),海鲜系列(冷冻带鱼,虾米等)以及其他冷冻食品.</p>
+                                <p>　　本公司联系地址:菏泽市开发区长江东路5299号,公司联系方式:0530-5531868, E-mail:<a href="mailto:1306075970@qq.com">1306075970@qq.com</a></p>
+</div>
+                        </div>
+                    </div><!-- .adress -->
+                </article>
+                
+                <div class="clear"></div>
+            </div><!-- #content -->
+
+
+{% endblock %}
+
+
+{% block footer %}
+    {% include 'footer.html' %}
+{% endblock %}

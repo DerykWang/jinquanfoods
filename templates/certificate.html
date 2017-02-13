@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<!--
+<title>this is product html!</title>-->
+{% block title %}菏泽开发区锦全食品公司公司资质介绍{% endblock %}
+
+{% block top %}
+    {% include 'top.html' %}
+{% endblock %}
+
+
+
+{% block header %}
+    {% include 'header.html' %}
+{% endblock %}
+
+
+{% block slide %}
+{% endblock %}
+
+
+
+{% block main %}
+    <div class="breadcrumbs">
+        <div class="container_12">
+            <div class="grid_12">
+                <span class="current">当前位置：</span><span></span><a href="{% url 'index' %}">首页</a><span></span><a href="{% url 'certificate' %}">公司资质</a>
+            </div>
+        </div>
+    </div>
+    
+    <section id="main">
+        <div class="container_12">
+            <div id="content" class="grid_9">
+                <header>
+                    <h1 class="page_title">公司资质</h1>
+                </header>
+                                                <article class="post">
+                    <h2><a href="{% url 'certificate' %}" target="_blank" title="企业法人营业执照">企业法人营业执照</a></h2>            
+                    <p>菏泽市开发区锦全食品有限公司成立于2015年10月，前身为菏泽大安食品，公司经营范围包括生鲜冷冻食品. <p>- 2015-12-09 09:57:34...</p><a href="{% url 'certificate' %}" target="_blank" class="more"></a></p>
+                </article>
+                                <article class="post">
+                    <h2><a href="{% url 'certificate' %}" target="_blank" title="组织机构代码证 机构信用代码证">组织机构代码证 机构信用代码证</a></h2>            
+                    <p> - 2015-12-09 10:08:50...<a href="{% url 'certificate' %}" target="_blank" class="more"></a></p>
+                </article>
+                                <article class="post">
+                    <h2><a href="{% url 'certificate' %}" target="_blank" title="生产许可证">生产许可证</a></h2>            
+                    <p> - 2015-12-09 10:01:16...<a href="{% url 'certificate' %}" target="_blank" class="more"></a></p>
+                </article>
+                                <article class="post">
+                    <h2><a href="{% url 'certificate' %}" target="_blank" title="食品流通许可证">食品流通许可证</a></h2>            
+                    <p> - 2015-12-09 10:01:15...<a href="{% url 'certificate' %}" target="_blank" class="more"></a></p>
+                </article>
+                                <article class="post">
+                    <h2><a href="{% url 'certificate' %}" target="_blank" title="绿色食品证书">绿色食品证书</a></h2>            
+                    <p> 经中国绿色食品发展中心审核，苦荞茶符合绿色食品A级标准，被认定为绿色食品A级产品，许可使用绿色食品标志。 - 2015-12-09 09:57:34...<a href="{% url 'certificate' %}" target="_blank" class="more"></a></p>
+                </article>
+                               <!--
+                                <article class="post">
+                    <h2><a href="{% url 'certificate' %}" target="_blank" title="农民专业合作社法人营业执照">农民专业合作社法人营业执照</a></h2>            
+                    <p>   通渭县高源红小杂粮种植开发农民专业合作社，法定代表人侯兆乾，业务范围包括小杂粮优良品种引进、种植繁育、技术培训、无公害基地建 - 2014-12-09 09:53:24...<a href="{% url 'certificate' %}" target="_blank" class="more"></a></p>
+                </article>
+
+                -->
+                <!--
+                                <div id="pages" class="text-c"><a class="a1">7条</a> <a href="/html/gongsizizhi/index.html" class="a1">上一页</a> <span>1</span> <a href="/html/gongsizizhi/2.html">2</a> <a href="/html/gongsizizhi/2.html" class="a1">下一页</a></div>
+                            </div>                            -->
+                            <!-- #content -->
+
+
+
+
+{% endblock %}
+
+
+{% block footer %}
+    {% include 'footer.html' %}
+{% endblock %}

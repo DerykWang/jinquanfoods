@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+<!--
+<title>this is product html!</title>-->
+{% block title %}菏泽开发区锦全食品有限公司新闻动态{% endblock %}
+
+{% block top %}
+    {% include 'top.html' %}
+{% endblock %}
+
+
+
+{% block header %}
+    {% include 'header.html' %}
+{% endblock %}
+
+
+{% block slide %}
+{% endblock %}
+
+
+
+
+{% block main %}
+    <div class="breadcrumbs">
+        <div class="container_12">
+            <div class="grid_12">
+                <span class="current">当前位置：</span><span></span><a href="{% url 'index' %}">首页</a><span></span> <a href="{% url 'news' %}">>公司动态</a>
+            </div>
+        </div>
+    </div>
+
+
+
+        <section id="main">
+        <div class="container_12">
+            <div id="content" class="grid_9">
+                <article>
+                    <div class="content_article">
+                        <!--<dl class="pro_info">  -->
+                        {% for news in newslist %}
+                        <dl>
+                            {% if news.img %}
+                            <dt>
+                                <img src="{{ news.img.url }}" title="{{ news.title }}"/>
+                            </dt>
+                            {% else %}
+                                <p></p>
+                            {% endif %}
+                            <dd>
+                                <h1 class="page_title">新闻标题: {{ news.title }}</h1>
+                                <p></p>
+                                <p></p>
+                                <div class="pro_spec">时间：{{ news.created_at }}</div>
+                                <div class="pro_spec">新闻内容：{{ news.content }}</div>
+                                <!--
+                                <div class="price">
+                                    价格：
+                                    <div class="price_old">￥{{ pro.price }}</div>
+                                </div>
+                                <div class="cart">
+                                -->
+                                <!--没有此段注释掉
+                                    <a href="http://detail.tmall.com/item.htm?id=39796676197" target="_blank" class="bay">网店优惠购买&raquo;</a>
+                                    -->
+                                </div>
+                            </dd>
+                        </dl>
+                        {% empty %}
+                            <p>没有新闻动态</p>
+                        {% endfor %}
+                            <p>　</p>
+                            <!--
+                        <div class="article_next">                          
+                            产品列表： <a href="{% url 'product' %}">产品列表</a><br>
+                        </div>-->
+                        <p><a href="{% url 'product' %}">产品列表</a><br></p>
+                        <p><a href="{% url 'aboutus' %}">公司简介</a><br></p>
+                        <p><a href="{% url 'contectus' %}">联系方式</a><br></p>
+                    </div>
+            
+                </article>
+                <div class="clear"></div>
+            </div>
+
+{% endblock %}
+
+
+{% block footer%}
+    {% include 'footer.html' %}
+{% endblock %}

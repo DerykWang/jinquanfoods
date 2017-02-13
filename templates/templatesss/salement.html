@@ -1,0 +1,19 @@
+{% load staticfiles %}
+<!--
+<div class="products">  -->
+
+{% for pro in prolist %}
+    <article class="grid_3 article">                        
+        <a href="{% url 'detail' pro.id  %}" target="_blank">
+            <div class="prev">
+                <img src="{{ pro.img.url}}" alt="{{ pro.name }}" title="">
+            </div>
+        </a>
+        <a>
+            <h3>{{ pro.name }}</h3>
+        </a>
+    </article>
+{% endfor %}
+<!--
+    <div class="clear"></div>  -->
+<!-- </div>  --><!-- .products -->

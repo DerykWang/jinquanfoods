@@ -1,0 +1,29 @@
+{% load staticfiles%}
+<header>
+    <div class="container_12">
+		<div class="grid_3">
+			<hgroup>
+				<h1 id="site_logo"><a href="#" title="菏泽开发区锦全食品有限公司"><img src="{% static 'img/logo.png' %}" alt="锦全食品有限责任公司"></a></h1>
+				<h2 id="site_description">优质美味食品,来自锦全</h2>
+			</hgroup>
+		</div><!-- .grid_3 -->
+
+		<div class="grid_9">
+			<nav class="primary">
+									<ul>
+					<li class="curent"><a href="{% url 'index' %}">首页</a></li>
+											<!--<li><a href="{% url 'aboutus' %}" target="_blank">关于我们</a></li>-->
+					<li class="curent"><a href='http://jinquanshipin.cn' target="_blank">锦全商城</a></li>
+											<li><a href="{% url 'product' %}" target="_self">产品列表</a></li>
+											
+											
+											
+											<li><a href="{% url 'news' %}" target="_self">公司动态</a></li>
+											<li><a href="{% url 'aboutus' %}" target="_self">公司简介</a></li>
+											<li><a href="{% url 'certificate' %}" target="_self">公司资质</a></li>
+											<li><a href="{% url 'contectus' %}" target="_self">联系方式</a></li>
+										</ul>
+								</nav><!-- .primary -->
+		</div><!-- .grid_9 -->
+    </div>
+ </header>
